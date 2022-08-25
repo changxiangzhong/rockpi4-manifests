@@ -13,7 +13,7 @@ make rk3399-chang.img -j32
 
 # Compile AOSP
 source build/envsetup.sh
-lunch 57
+lunch 57 #### lunch rk3399_chang-userdebug maybe?
 make -j 32
 
 # Rockchip specific shell to make .img files
@@ -22,7 +22,8 @@ make -j 32
 # Link box images to rockdev/Image
 ln -s RKTools/linux/Linux_Pack_Firmware/rockdev/ rockdev
 cd rockdev
-ln -s Image-rk3399_box/ Image
+# ln -s Image-rk3399_box/ Image
+ln -s Image-rk3399_chang/ Image
 
 # Generate final gpt.img
 ./android-gpt.sh
