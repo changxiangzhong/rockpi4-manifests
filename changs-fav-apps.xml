@@ -3,6 +3,8 @@
   <remote fetch="https://github.com/changxiangzhong/" name="changs-repo"/>
   <!--<project name="rockpi4-vendor-chang" path="vendor/chang" remote="changs-repo" revision="e48a3f2a9ee313049329117d95985a17556781c9"/>-->
   <project name="rockpi4-vendor-chang" path="vendor/chang" remote="changs-repo" revision="refs/heads/main"/>
-  <remove-project name="rk/device/rockchip/rk3399" />
+  <remove-project name="rk/device/rockchip/rk3399"/>
   <project name="rockpi4-device-rockchip-rk3399" path="device/rockchip/rk3399" remote="changs-repo" revision="refs/heads/main"/>
+  <remove-project name="rk/kernel"/>
+  <project name="rockpi4-kernel" path="kernel" remote="changs-repo" revision="refs/heads/main"/>
 </manifest>
