@@ -18,6 +18,7 @@
   <project name="rockpi4-external-vim" path="external/vim" remote="changs-repo" revision="refs/heads/android-9.0"/>
 
   <project name="rockpi4-packages-experimental-hello" path="packages/experimental/Hello" remote="changs-repo" revision="refs/heads/main"/>
+  <project name="rockpi4-libnativehelper" path="libnativehelper" remote="changs-repo" revision="refs/heads/main"/>
 
   <remove-project name="platform/system/core" />
   <project name="system-core" path="system/core" remote="new-repo" revision="refs/heads/main"/>
