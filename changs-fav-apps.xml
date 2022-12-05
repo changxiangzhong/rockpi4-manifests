@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <!--Introduce the new git storage-->
+  <remote fetch="https://gitlab.com/changs-rock-4b/" name="new-repo"/>
   <remote fetch="https://github.com/changxiangzhong/" name="changs-repo"/>
-  <!--<project name="rockpi4-vendor-chang" path="vendor/chang" remote="changs-repo" revision="e48a3f2a9ee313049329117d95985a17556781c9"/>-->
+
   <project name="rockpi4-vendor-chang" path="vendor/chang" remote="changs-repo" revision="refs/heads/main"/>
   <remove-project name="rk/device/rockchip/rksdk"/>
   <project name="rockpi4-device-rockchip-common" path="device/rockchip/common" remote="changs-repo" revision="refs/heads/main"/>
@@ -14,10 +16,13 @@
   <project name="rockpi4-external-hello" path="external/hello" remote="changs-repo" revision="refs/heads/main"/>
   <project name="rockpi4-external-libncurses" path="external/libncurses" remote="changs-repo" revision="refs/heads/android-9.0"/>
   <project name="rockpi4-external-vim" path="external/vim" remote="changs-repo" revision="refs/heads/android-9.0"/>
+
   <project name="rockpi4-packages-experimental-hello" path="packages/experimental/Hello" remote="changs-repo" revision="refs/heads/main"/>
 
-  <!--Introduce the new git storage-->
-  <remote fetch="https://gitlab.com/changs-rock-4b/" name="new-repo"/>
+  <remove-project name="platform/system/core" />
+  <project name="system-core" path="system/core" remote="new-repo" revision="refs/heads/main"/>
   <remove-project name="platform/frameworks/base" />
-  <project name="platform/framework/base" path="frameworks/base" remote="new-repo" revision="refs/heads/main"/>
+  <project name="frameworks-base" path="frameworks/base" remote="new-repo" revision="refs/heads/main"/>
+  <remove-project name="platform/hardware/libhardware" />
+  <project name="rockpi4-hardware-libhardware" path="hardware/libhardware" remote="changs-repo" revision="refs/heads/main"/>
 </manifest>
