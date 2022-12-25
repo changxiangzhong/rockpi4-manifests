@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <!--Introduce the new git storage-->
-  <remote fetch="https://gitlab.com/changs-rock-4b/" name="new-repo"/>
-  <remote fetch="https://github.com/changxiangzhong/" name="changs-repo"/>
+  <remote fetch="git@gitlab.com:changs-rock-4b/" name="new-repo"/>
+  <remote fetch="git@github.com:changxiangzhong/" name="changs-repo"/>
 
   <project name="rockpi4-vendor-chang" path="vendor/chang" remote="changs-repo" revision="refs/heads/main"/>
   <remove-project name="rk/device/rockchip/rksdk"/>
